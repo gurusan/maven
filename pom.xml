@@ -9,16 +9,12 @@
 
   <name>guru</name>
   <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
- <build> 
-  <plugin>
+  
+  <build> 
+   <plugin>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.5.5.201112152213</version>
+    <version>-1.5.5.201112152213</version>
     <configuration>
 	<destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
 	<dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
@@ -38,8 +34,14 @@
           </goals>
         </execution>
     </executions>
-  </plugin>
- </build>
+   </plugin>
+  </build>
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

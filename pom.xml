@@ -20,8 +20,8 @@
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.5.5.201112152213</version>
     <configuration>
-	<destFile>${basedir}/target/covarage-reports/jacoco-unit.exec</destFile>
-	<dataFile>${basedir}/target/covarage-reports/jacoco-unit.exec</dataFile>
+	<destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+	<dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
     </configuration>
     <executions>
         <execution>
@@ -31,14 +31,14 @@
           </goals>
         </execution>
         <execution>
-          <id>jacoco-site</id>
+	  <id>jacoco-site</id>
+	    <phase>package</phase>
           <goals>
-            <goal>package</goal>
+            <goal>report</goal>
           </goals>
         </execution>
     </executions>
   </plugin>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
